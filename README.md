@@ -1,4 +1,5 @@
 # ZeroGParts
+ZeroGParts Models and Controllers for the TechForSpace ZeroG Drone
 
 ## Installation
 Clone the ZeroGParts folder into your Arduino libraries folder
