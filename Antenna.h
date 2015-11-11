@@ -25,6 +25,7 @@ public:
 
     // Connection
     bool isConnected();
+    bool connect();
 
     // Signal
     void setSignalStrength(float _SignalStrength);

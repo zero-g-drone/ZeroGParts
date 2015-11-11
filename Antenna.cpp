@@ -7,25 +7,25 @@
 #include "Antenna.h"
 
 CAntenna::CAntenna(char* _NetworkName, char* _NetworkPassword)
-        : m_NetworkName (nullptr)
-        , m_NetworkPassword (nullptr)
+        : m_NetworkName (NULL)
+        , m_NetworkPassword (NULL)
 {
     setNetworkName(_NetworkName);
     setNetworkPassword(_NetworkPassword);
 }
 
 CAntenna::CAntenna()
-        : m_NetworkName(nullptr)
-        , m_NetworkPassword(nullptr)
+        : m_NetworkName(NULL)
+        , m_NetworkPassword(NULL)
 {
 }
 
 CAntenna::~CAntenna()
 {
-    if (m_NetworkPassword != nullptr)
+    if (m_NetworkPassword != NULL)
         free(m_NetworkPassword);
 
-    if (m_NetworkName != nullptr)
+    if (m_NetworkName != NULL)
         free(m_NetworkName);
 }
 
@@ -50,6 +50,12 @@ bool CAntenna::isConnected()
 {
     // communicate with Arduino stuff here
     return m_Connected;
+}
+
+bool CAntenna::connect()
+{
+    // connect antenna to network here
+    return true;
 }
 
 void CAntenna::setSignalStrength(float _SignalStrength)
